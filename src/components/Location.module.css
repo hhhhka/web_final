@@ -1,0 +1,96 @@
+/* .flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: stretch;
+  border: 1px solid;
+  margin: 1rem;
+} */
+
+.gridContainer {
+  min-width: 350px;
+  margin: 1em;
+  border: 1px solid;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "temps  icons"
+    "forecast forecast"
+    "city city";
+}
+
+.temps {
+  width: 90%;
+  height: 90%;
+  grid-area: temps;
+  justify-self: center;
+  align-self: center;
+  /* border: 1px solid; */
+}
+
+.icons {
+  width: 90%;
+  height: 90%;
+  margin-bottom: 1em;
+  grid-area: icons;
+  justify-self: center;
+  align-self: center;
+  /* border: 1px solid; */
+}
+
+
+
+.icons span {
+  display: flex;
+  justify-content: center;
+}
+
+.city {
+  /* width: 90%;
+  height: 90%; */
+  /* max-width: 70%; */
+  grid-area: city;
+  /* margin: 0.5em 2em; */
+  /* border: 1px solid; */
+}
+
+.city h4 {
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 70%;
+  
+}
+
+.forecast {
+  
+  display: flex;
+  margin: 1em 0;
+  width: 95%;
+  height: 90%;
+  grid-area: forecast;
+  justify-self: center;
+  align-self: center;
+  justify-content: space-between;
+  /* border: 1px solid; */
+}
+
+.forecast div img {
+  display:block;
+  height: 50px;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
+.deleteBtn button {
+  height: 5px;
+  width: 5px;
+}
